@@ -2,7 +2,6 @@ import Thumbnail from './Thumbnail';
 import FlipMove from 'react-flip-move';
 
 const Body = ({ results }) => {
-	console.log(results);
 	return (
 		<FlipMove
 			enterAnimation='fade'
@@ -15,5 +14,4 @@ const Body = ({ results }) => {
 		</FlipMove>
 	);
 };
-
 export default Body;
