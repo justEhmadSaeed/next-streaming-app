@@ -21,10 +21,10 @@ const Header = () => {
 				<HeaderItem title='ACCOUNT' Icon={UserIcon} />
 			</div>
 			<Image
-				className='object-contain'
-				src='https://links.papareact.com/ua6'
+				className='object-contain fill-current text-gray-500'
+				src='/vercel.svg'
 				width={200}
-				height={100}
+				height={60}
 			/>
 		</header>
 	);
