@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Body from '../components/Body';
 import Header from '../components/Header';
 import Navbar from '../components/Navbar';
 import requests from '../utils/requests';
@@ -11,7 +12,10 @@ export const getServerSideProps = async (context) => {
 		}`
 	)
 		.then((res) => res.json())
-		.catch((err) => console.log(err));
+		.catch((err) => {
+			console.log(err);
+			return { results: [] };
+		});
 
 	return {
 		props: {
@@ -20,7 +24,7 @@ export const getServerSideProps = async (context) => {
 	};
 };
 
-export default function Home({results}) {
+export default function Home({ results }) {
 	return (
 		<div>
 			<Head>
@@ -34,7 +38,7 @@ export default function Home({results}) {
 
 			<Header />
 			<Navbar />
+			<Body results={results} />
 		</div>
 	);
 }
-
